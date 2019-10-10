@@ -9,7 +9,6 @@ class HomeNavBar extends Component {
                 <Navbar.Toggle/>
                 <Navbar.Collapse>
                     <Nav>
-                        <Nav.Link href="/createnew">Create New</Nav.Link>
                         <Nav.Link href="/dashboard">DashBoard</Nav.Link>
                         <Nav.Link href="/createnew">Create New Client Visit</Nav.Link>
 
