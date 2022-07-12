@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from '../Home/Home';
 import CreateNew from '../CreateNew/CreateNew';
@@ -12,15 +12,13 @@ import Report from '../Reports/Report';
 function App() {
   return (
       <Router>
-          <Switch>
-              <div>
-                  <HomeNavBar />
-                  <Route exact path="/" component={Home} />
-                  <Route path="/createnew" component={CreateNew} />
-                  <Route path="/dashboard" component={DashBoard} />
-                  <Route path="/report" component={Report} />
-              </div>
-          </Switch>
+      <HomeNavBar />
+        <Routes>
+              <Route exact path="/" element={<Home/>} />
+              <Route path="/createnew" element={<CreateNew/>} />
+              <Route path="/dashboard" element={<DashBoard/>} />
+              <Route path="/report" element={<Report/>} />
+        </Routes>
       </Router>
   );
 }
