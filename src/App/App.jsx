@@ -12,7 +12,7 @@ import Report from '../Reports/Report';
 function App() {
   return (
       <Router>
-      <HomeNavBar />
+        <HomeNavBar />
         <Routes>
               <Route exact path="/" element={<Home/>} />
               <Route path="/createnew" element={<CreateNew/>} />
